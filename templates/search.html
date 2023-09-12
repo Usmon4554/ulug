@@ -1,0 +1,19 @@
+<!-- We have your car {{s}} about {{d}} -->
+Hi!
+
+
+{% for k in data%}
+
+    <!-- {% if s in k %}
+        We have your car {{k[s]}}
+    {% endif %} -->
+    {% for name in k%}
+        {% if s in k[name] %}
+        <!-- <p>{{k[name]}}</p> -->
+        <p>We have your car {{k[name]}} and it is about {{k['description']}}</p>
+        {% endif %}
+    {% endfor %}
+
+    <!-- <p>{{k}}</p> -->
+
+{% endfor%}
